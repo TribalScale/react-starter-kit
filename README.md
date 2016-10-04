@@ -33,7 +33,7 @@ The app will be listening to port 8080: [http://localhost:8080/](http://localhos
 
 ## How to test, lint and build
 
-To run lint (please lint & test before every commit)
+To run lint (please lint & test before every commit). We use [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) with minor changes.
 ```
 npm run lint
 ```
@@ -48,9 +48,10 @@ To run build
 npm run build
 ```
 
+## SCSS guidelines
+We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our development
 
 ## Pending list
-- sass
 - redux
 - react-router
 - add directory layout
