@@ -1,14 +1,15 @@
-var path = require("path");
+var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: ["./src/main.jsx"]
+    app: ['./src/main.jsx']
   },
   output: {
     path: path.resolve(__dirname),
-    filename: "js/bundle.js"
+    filename: 'js/bundle.js'
   },
+  resolve: {extensions: ['', '.js', '.jsx']},
   module: {
     loaders: [
       {

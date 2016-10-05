@@ -6,10 +6,9 @@ module.exports = {
         "import"
     ],
     "rules": {
-        "react/jsx-closing-bracket-location": [
-          "off"
-        ],
-        "comma-dangle": ["error", "never"]
+        "react/jsx-closing-bracket-location": ["off"],
+        "comma-dangle": ["error", "never"],
+        "react/no-unused-prop-types": ["error", { skipShapeProps: true }]
     },
     "globals": {
         "document": true

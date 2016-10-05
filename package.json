@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "npm run eslint",
     "eslint": "eslint --ext .js --ext .jsx src || true",
-    "dev": "webpack-dev-server --progress --colors --host 0.0.0.0",
+    "dev": "webpack-dev-server --history-api-fallback --inline --progress --colors --host 0.0.0.0",
     "build": "webpack -p"
   },
   "repository": {
