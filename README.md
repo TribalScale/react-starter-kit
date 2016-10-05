@@ -53,5 +53,4 @@ We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our d
 
 ## Pending list
 - redux
-- react-router
 - add directory layout
