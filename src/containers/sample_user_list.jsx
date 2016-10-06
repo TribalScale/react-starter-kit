@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 
-const sampleUserList = [
-  { id: 'ADKJ12423', name: 'Sample User ADKJ' },
-  { id: 'FWQW44524', name: 'Sample User FWQW' }
-];
+const mapStateToProps = state => ({
+  sampleUserList: (state && state.user && state.user.list) ? state.user.list : []
+});
 
-const SampleUserList = () => {
+const SampleUserListContent = ({ sampleUserList }) => {
   const userList = [];
 
   if (sampleUserList.length > 0) {
@@ -35,5 +35,14 @@ const SampleUserList = () => {
     </div>
   );
 };
+
+SampleUserListContent.propTypes = {
+  sampleUserList: PropTypes.array.isRequired
+};
+
+const SampleUserList = connect(
+  mapStateToProps
+)(SampleUserListContent);
+
 
 export default SampleUserList;

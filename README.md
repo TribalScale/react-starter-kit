@@ -31,6 +31,10 @@ $ npm run dev
 ```
 The app will be listening to port 8080: [http://localhost:8080/](http://localhost:8080/)
 
+### 4. Remove sample code
+Sample code has been placed just for your reference and to give an idea of the scafolding. Please make sure you remove them from your project.
+
+
 ## How to test, lint and build
 
 To run lint (please lint & test before every commit). We use [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) with minor changes.
@@ -49,8 +53,10 @@ npm run build
 ```
 
 ## SCSS guidelines
-We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our development
+We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our development.
+
+## AsyncAction util
+We have created a util which prevents duplicate requests as well as simplifies the logic to make request and receive async actions. Feel free to use at your discretion.
 
 ## Pending list
-- redux
 - add directory layout
