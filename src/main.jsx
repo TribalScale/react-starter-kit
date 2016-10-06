@@ -13,7 +13,7 @@ import { fetchSampleUser } from './actions/sample_user';
 import SampleUserListComponent from './containers/sample_user_list';
 import SampleUserComponent from './components/sample_user';
 
-require('./sass/main.scss');
+require('./stylesheets/main.scss');
 
 const store = createStore(
   appReducers,
