@@ -3,7 +3,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: ['./src/main.jsx']
+    app: ['babel-polyfill', 'isomorphic-fetch', './src/main.jsx']
   },
   output: {
     path: path.resolve(__dirname),
