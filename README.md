@@ -47,6 +47,11 @@ To run unit test cases
 npm run test
 ```
 
+To clean the complied files in the build directory
+```
+npm run clean
+```
+
 To run build
 ```
 npm run build

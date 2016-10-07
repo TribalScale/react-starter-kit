@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: DEBUG ? 'js/bundle.js' : 'js/bundle.[hash].js'
+    filename: DEBUG ? '/js/bundle.js' : '/js/bundle.[hash].js'
   },
   resolve: {extensions: ['', '.js', '.jsx']},
   module: {
@@ -35,7 +35,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin(DEBUG ? 'css/style.css' : 'css/style.[hash].css'),
+    new ExtractTextPlugin(DEBUG ? '/css/style.css' : '/css/style.[hash].css'),
     new webpack.DefinePlugin({
       "process.env": {
          NODE_ENV: JSON.stringify(DEBUG ? "development" : "production")

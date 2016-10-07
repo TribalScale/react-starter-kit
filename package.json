@@ -7,6 +7,7 @@
     "lint": "npm run eslint",
     "eslint": "eslint --ext .js --ext .jsx src || true",
     "dev": "webpack-dev-server --history-api-fallback --inline --progress --colors --host 0.0.0.0",
+    "clean": "if [ -d \"build\" ]; then rm -r build; fi && mkdir build",
     "build": "webpack -p --progress --release"
   },
   "repository": {
