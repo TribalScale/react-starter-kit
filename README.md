@@ -47,10 +47,51 @@ To run unit test cases
 npm run test
 ```
 
+To clean the complied files in the build directory
+```
+npm run clean
+```
+
 To run build
 ```
 npm run build
 ```
+
+Testing production build before deployment. To test a production build locally, you need to setup a web server. Feel free to setup a web server of your choice locally or deploy the build to a test environment. In the following example, we have used http-server and started the app on port 8010
+```
+npm run build
+cd build
+http-server -p 8010
+```
+
+## Directory Layout
+```
+.
+|____build 							# Directory for compiled files
+|____node_modules					# 3rd-party libraries and utilities
+|____src
+| |____utils						# Directory for custom utils, helpers & libraries
+| | |____async_action.js			# Redux async action helper util
+| |____actions						# Directory for redux actions
+| |____components					# Directory for react components
+| |____containers					# Directory for react containers
+| |____reducers						# Directory for redux reducers
+| | |____index.js					# List of reducers combined here
+| |____stylesheets
+| | |____abstracts
+| | | |_____variables.scss			# List of variables used in the app
+| | |____base
+| | | |_____typography.scss			# List of custom fonts (if necessary)
+| | |____layout
+| | | |____main.scss				# Base style and app layout css
+| | |____main.scss					# Import all the scss here
+| |____main.jsx						# App entry file
+|____index.html						# App HTML file
+|____webpack.config.js				# Configurations for client-side bundles
+|____package.json					# List of 3rd party libraries and utilities
+|____.eslintrc.js 					# We use eslint-config-airbnb with minor changes.
+```
+
 
 ## SCSS guidelines
 We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our development.
@@ -58,5 +99,5 @@ We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our d
 ## AsyncAction util
 We have created a util which prevents duplicate requests as well as simplifies the logic to make request and receive async actions. Feel free to use at your discretion.
 
-## Pending list
-- add directory layout
+## Pending items
+* Setup redux logger
