@@ -100,4 +100,5 @@ We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our d
 We have created a util which prevents duplicate requests as well as simplifies the logic to make request and receive async actions. Feel free to use at your discretion.
 
 ## Pending items
-* Setup redux logger
+* Create a branch with auth0 integration
+* Integrate unit test examples
