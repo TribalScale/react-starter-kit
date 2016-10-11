@@ -5,6 +5,7 @@ import { Router, Route, IndexRedirect, browserHistory } from 'react-router';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
+import createLogger from 'redux-logger';
 
 import appReducers from './reducers';
 
@@ -15,11 +16,15 @@ import SampleUserComponent from './components/sample_user';
 
 require('./stylesheets/main.scss');
 
+const middlewares = [thunkMiddleware];
+if (process.env.NODE_ENV === 'development') {
+  const loggerMiddleware = createLogger();
+  middlewares.push(loggerMiddleware);
+}
+
 const store = createStore(
   appReducers,
-  applyMiddleware(
-    thunkMiddleware
-  )
+  applyMiddleware(...middlewares)
 );
 
 store.dispatch(fetchSampleUser());
