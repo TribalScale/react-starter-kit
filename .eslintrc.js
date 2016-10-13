@@ -9,9 +9,11 @@ module.exports = {
         "react/jsx-closing-bracket-location": ["off"],
         "comma-dangle": ["error", "never"],
         "react/no-unused-prop-types": ["error", { skipShapeProps: true }],
-        "react/forbid-prop-types": ["error", { "forbid": ["any", "object"] }]
+        "react/forbid-prop-types": ["error", { "forbid": ["any", "object"] }],
+        "no-underscore-dangle": ["error", { "allow": ["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"] }]
     },
     "globals": {
+        "window": true,
         "document": true,
         "fetch": true
     }
