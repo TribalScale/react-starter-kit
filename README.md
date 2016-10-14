@@ -87,11 +87,19 @@ http-server -p 8010
 | | |____main.scss					# Import all the scss here
 | |____main.jsx						# App entry file
 |____index.html						# App HTML file
+|____tests
+| |____actions						# Directory for actions test cases
+| |____components					# Directory for components test cases
+| |____containers					# Directory for containers test cases
+| |____reducers						# Directory for reducers test cases
+| |____test_helper.js				# Unit test helper util
 |____webpack.config.js				# Configurations for client-side bundles
 |____package.json					# List of 3rd party libraries and utilities
 |____.eslintrc.js 					# We use eslint-config-airbnb with minor changes.
 ```
 
+## Redux debugging
+We have made necessary changes to the code to support [redux-devtools-extension](http://zalmoxisus.github.io/redux-devtools-extension/) in the development environment. Please feel free to install necessary add-on / extension to your browser, if you wish to use the redux devtools.
 
 ## SCSS guidelines
 We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our development.
@@ -99,6 +107,8 @@ We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our d
 ## AsyncAction util
 We have created a util which prevents duplicate requests as well as simplifies the logic to make request and receive async actions. Feel free to use at your discretion.
 
-## Pending items
-* Create a branch with auth0 integration
-* Integrate unit test examples
+## Unit Testing
+We use following packages to write our unit test cases:
+* [mocha](https://www.npmjs.com/package/mocha)
+* [unexpected-react](https://www.npmjs.com/package/unexpected-react)
+* [enzyme](https://www.npmjs.com/package/enzyme)

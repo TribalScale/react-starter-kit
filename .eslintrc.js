@@ -13,7 +13,6 @@ module.exports = {
         "no-underscore-dangle": ["error", { "allow": ["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"] }]
     },
     "globals": {
-        "window": true,
         "document": true,
         "fetch": true
     }
