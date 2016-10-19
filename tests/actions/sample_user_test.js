@@ -1,4 +1,3 @@
-import React from 'react';
 import { testAsyncAction } from '../test_utils';
 
 import { REQUEST_USER, RECEIVE_USER, fetchSampleUser } from '../../src/actions/sample_user';
