@@ -104,8 +104,14 @@ We have made necessary changes to the code to support [redux-devtools-extension]
 ## SCSS guidelines
 We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our development.
 
-## AsyncAction util
-We have created a util which prevents duplicate requests as well as simplifies the logic to make request and receive async actions. Feel free to use at your discretion.
+## AsyncAction and testAsyncAction utils
+We have created AsyncAction util which prevents duplicate requests as well as simplifies the logic to make request and receive async actions. And the testAsyncAction util, helps you write unit tests for actions that rely on AsyncAction util.
+
+You can find the examples on how to use the utils here:
+* [AsyncAction](https://github.com/TribalScale/react-starter-kit/blob/develop/src/actions/sample_user.js)
+* [testAsyncAction](https://github.com/TribalScale/react-starter-kit/blob/develop/tests/actions/sample_user_test.js)
+
+Feel free to use these utils at your discretion.
 
 ## Unit Testing
 We use following packages to write our unit test cases:
