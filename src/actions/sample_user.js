@@ -23,7 +23,7 @@ export function fetchSampleUser(data) {
   const params = {
     request_action: requestSampleUser,
     receive_action: receiveSampleUser,
-    endpoint: 'http://api.randomuser.me/?results=15',
+    endpoint: 'https://api.randomuser.me/?results=15',
     reducer: 'user',
     data
   };

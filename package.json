@@ -9,7 +9,6 @@
     "dev": "webpack-dev-server --history-api-fallback --inline --progress --colors --host 0.0.0.0",
     "clean": "if [ -d \"build\" ]; then rm -r build; fi && mkdir build",
     "build": "webpack -p --progress --release",
-    "test-watch": "node_modules/.bin/mocha --compilers js:babel-core/register --require babel-polyfill --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\" --watch --watch-extensions jsx",
     "test": "node_modules/.bin/mocha --compilers js:babel-core/register --require babel-polyfill --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\""
   },
   "repository": {
@@ -53,6 +52,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "fetch-mock": "^5.5.0",
     "html-webpack-plugin": "^2.22.0",
     "isomorphic-fetch": "^2.2.1",
     "jsdom": "^9.6.0",
@@ -60,7 +60,6 @@
     "node-sass": "^3.10.1",
     "react-addons-test-utils": "^15.3.2",
     "sass-loader": "^4.0.2",
-    "sinon": "^1.17.6",
     "unexpected": "^10.18.1",
     "unexpected-react": "^3.2.4",
     "webpack": "^1.13.2",
