@@ -3,29 +3,29 @@ import asyncAction from '../utils/async_action';
 export const REQUEST_USER = 'REQUEST_USER';
 export const RECEIVE_USER = 'RECEIVE_USER';
 
-function requestSampleUser(data) {
+function requestSampleUser(context) {
   return {
     type: REQUEST_USER,
-    data
+    context
   };
 }
 
-function receiveSampleUser(data, json) {
+function receiveSampleUser(context, json) {
   return {
     type: RECEIVE_USER,
-    data,
+    context,
     response: json,
     receivedAt: Date.now()
   };
 }
 
-export function fetchSampleUser(data) {
+export function fetchSampleUser(context) {
   const params = {
     request_action: requestSampleUser,
     receive_action: receiveSampleUser,
     endpoint: 'https://api.randomuser.me/?results=15',
     reducer: 'user',
-    data
+    context
   };
   return asyncAction(params);
 }
