@@ -21,7 +21,7 @@ export const testAsyncAction = ({ testDescribe, actionMethod, uri, endpoint, met
       }
       fetchMock.get('*', {response: 'Invalid Response'});
 
-      actionMethod(returnsOnRequest.data)(
+      actionMethod(returnsOnRequest.context)(
         (nextAction) => nextAction(actionResponse => {
           switch (actionResponse.type) {
             case returnsOnRequest.type:

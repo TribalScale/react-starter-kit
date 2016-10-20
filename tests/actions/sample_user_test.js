@@ -11,7 +11,7 @@ const params = {
   uri: 'https://api.randomuser.me',
   endpoint: '/?results=15',
   method: 'GET',
-  returnsOnRequest: { type: REQUEST_USER, data: undefined },
+  returnsOnRequest: { type: REQUEST_USER, context: undefined },
   returnsOnReceive: { type: RECEIVE_USER, response: { hello: 'world' } }
 };
 
