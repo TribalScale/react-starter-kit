@@ -1,8 +1,12 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-import { expect } from '../test_utils';
+
+import unexpected from 'unexpected';
+import unexpectedReact from 'unexpected-react';
 
 import SampleUser from '../../src/components/sample_user';
+
+const expect = unexpected.clone().use(unexpectedReact);
 
 describe('Sample User Component', function () {
   const props = {params: {id: 'someRandomId'}};
