@@ -104,14 +104,10 @@ We have made necessary changes to the code to support [redux-devtools-extension]
 ## SCSS guidelines
 We follow [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern) for our development.
 
-## AsyncAction and testAsyncAction utils
-We have created AsyncAction util which prevents duplicate requests as well as simplifies the logic to make request and receive async actions. And the testAsyncAction util, helps you write unit tests for actions that rely on AsyncAction util.
+## AsyncAction helper util
+We have created a util which prevents duplicate requests as well as simplifies the logic to make request and receive async actions. Feel free to use at your discretion.
 
-You can find the examples on how to use the utils here:
-* [AsyncAction](https://github.com/TribalScale/react-starter-kit/blob/develop/src/actions/sample_user.js)
-* [testAsyncAction](https://github.com/TribalScale/react-starter-kit/blob/develop/tests/actions/sample_user_test.js)
-
-Feel free to use these utils at your discretion. <br>
+You can find the sample code here: [src/actions/sample_user.js](./src/actions/sample_user.js)<br>
 NOTE: If AsyncAction util is unable to detect the content-type of the API response, it fallbacks to blob content-type.
 
 ## Unit Testing
@@ -119,3 +115,5 @@ We use following packages to write our unit test cases:
 * [mocha](https://www.npmjs.com/package/mocha)
 * [unexpected-react](https://www.npmjs.com/package/unexpected-react)
 * [enzyme](https://www.npmjs.com/package/enzyme)
+* [sinon](https://www.npmjs.com/package/sinon)
+* [fetch-mock](https://www.npmjs.com/package/fetch-mock)
