@@ -32,7 +32,7 @@ $ npm run dev
 The app will be listening to port 8080: [http://localhost:8080/](http://localhost:8080/)
 
 ### 4. Remove sample code
-Sample code has been placed just for your reference and to give an idea of the scafolding. Please make sure you remove them from your project.
+Sample code has been placed just for your reference and to give an idea of the scaffolding. Please make sure you remove them from your project.
 
 
 ## How to test, lint and build
