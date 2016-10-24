@@ -4,6 +4,7 @@ import expect from 'unexpected';
 
 import * as asyncAction from '../../src/utils/async_action';
 import { fetchSampleUser } from '../../src/actions/sample_user';
+import { REQUEST_USER, RECEIVE_USER } from '../../src/constants/action_types';
 
 describe("Sample User Actions", () => {
   const context = {
@@ -32,6 +33,27 @@ describe("Sample User Actions", () => {
 
   it("should have a receive action property that is a function", () => {
     expect(argObj.receive_action, 'to be a', 'function');
+  });
+
+  it("should return request user action object", () => {
+    const expectedAction = {
+      type: REQUEST_USER,
+      context
+    };
+    expect(typeof argObj.request_action === 'function' ? argObj.request_action(context) : undefined, 'to equal', expectedAction);
+  });
+
+  it("should return receive user action object", () => {
+    const response = {
+      items: []
+    };
+    const expectedAction = {
+      type: RECEIVE_USER,
+      context,
+      response,
+      receivedAt: expect.it('to be a number')
+    };
+    expect(typeof argObj.receive_action === 'function' ? argObj.receive_action(context, response) : undefined, 'to satisfy', expectedAction);
   });
 
   it("should have a specific endpoint", () => {
