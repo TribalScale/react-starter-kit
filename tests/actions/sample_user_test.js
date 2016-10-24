@@ -3,7 +3,7 @@ import fetchMock from 'fetch-mock';
 import expect from 'unexpected';
 
 import * as asyncAction from '../../src/utils/async_action';
-import { fetchSampleUser } from '../../src/actions/sample_user';
+import fetchSampleUser from '../../src/actions/sample_user';
 import { REQUEST_USER, RECEIVE_USER } from '../../src/constants/action_types';
 
 describe('Sample User Actions', () => {

@@ -17,7 +17,7 @@ function receiveSampleUser(context, json) {
   };
 }
 
-export function fetchSampleUser(context) {
+export default function fetchSampleUser(context) {
   const params = {
     request_action: requestSampleUser,
     receive_action: receiveSampleUser,
