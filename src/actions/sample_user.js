@@ -1,7 +1,5 @@
 import asyncAction from '../utils/async_action';
-
-export const REQUEST_USER = 'REQUEST_USER';
-export const RECEIVE_USER = 'RECEIVE_USER';
+import { REQUEST_USER, RECEIVE_USER } from '../constants/action_types';
 
 function requestSampleUser(context) {
   return {
@@ -19,7 +17,7 @@ function receiveSampleUser(context, json) {
   };
 }
 
-export function fetchSampleUser(context) {
+export default function fetchSampleUser(context) {
   const params = {
     request_action: requestSampleUser,
     receive_action: receiveSampleUser,

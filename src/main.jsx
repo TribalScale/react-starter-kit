@@ -10,7 +10,7 @@ import createLogger from 'redux-logger';
 
 import appReducers from './reducers';
 
-import { fetchSampleUser } from './actions/sample_user';
+import fetchSampleUser from './actions/sample_user';
 
 import SampleUserListComponent from './containers/sample_user_list';
 import SampleUserComponent from './components/sample_user';

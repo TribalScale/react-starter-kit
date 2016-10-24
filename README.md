@@ -32,7 +32,7 @@ $ npm run dev
 The app will be listening to port 8080: [http://localhost:8080/](http://localhost:8080/)
 
 ### 4. Remove sample code
-Sample code has been placed just for your reference and to give an idea of the scafolding. Please make sure you remove them from your project.
+Sample code has been placed just for your reference and to give an idea of the scaffolding. Please make sure you remove them from your project.
 
 
 ## How to test, lint and build
@@ -72,6 +72,8 @@ http-server -p 8010
 |____src
 | |____utils						# Directory for custom utils, helpers & libraries
 | | |____async_action.js			# Redux async action helper util
+| |____constants
+| | |____action_types.js			# List of action type constants
 | |____actions						# Directory for redux actions
 | |____components					# Directory for react components
 | |____containers					# Directory for react containers
