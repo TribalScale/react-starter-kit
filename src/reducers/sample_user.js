@@ -1,4 +1,4 @@
-import { REQUEST_USER, RECEIVE_USER } from '../actions/sample_user';
+import { REQUEST_USER, RECEIVE_USER } from '../constants/action_types';
 
 const getUserList = (response) => {
   const userList = [];

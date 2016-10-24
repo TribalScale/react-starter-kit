@@ -72,6 +72,8 @@ http-server -p 8010
 |____src
 | |____utils						# Directory for custom utils, helpers & libraries
 | | |____async_action.js			# Redux async action helper util
+| |____constants
+| | |____action_types.js			# List of action type constants
 | |____actions						# Directory for redux actions
 | |____components					# Directory for react components
 | |____containers					# Directory for react containers
